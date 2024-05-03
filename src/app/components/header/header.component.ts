@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 
+interface person{
+  name: string;
+  age: number;
+  email: string;
+}
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -10,9 +16,9 @@ import { ButtonComponent } from '../button/button.component';
 })
 
 export class HeaderComponent {
-  title = 'Task Tracker';
-  arr = ['cat', 'dog', 'mouse'];
-  obj = {
+  title: string = 'Task Tracker';
+  arr: string[] = ['cat', 'dog', 'mouse'];
+  obj: person = {
     name: 'Kyle',
     age: 31,
     email: 'kylebaugh1@gmail.com'
